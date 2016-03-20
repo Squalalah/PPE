@@ -1,0 +1,40 @@
+.div-logreg {
+	background-color: white;
+	border: 1px solid black;
+	width: 80%;
+	margin: 0 auto;
+	padding: 8px;
+}
+
+.imp {
+	font-weight: bold;
+	text-align: center;
+}
+
+input[title="ins"]  {
+
+	display: block;
+	margin-left: 125px;
+}
+
+input[title="co"]  {
+
+	display: block;
+	margin-left: 125px;
+}
+
+label {
+
+display: block;
+width: 200px;
+float: left;
+
+}
+
+#submit {
+	float:right;
+}
+
+.code {
+	width: 50px;
+}

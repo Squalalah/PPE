@@ -1,0 +1,13 @@
+#div-article {
+	background-color: white;
+	border: 1px solid black;
+	width: 70%;
+	margin: 0 auto;
+	padding: 8px;
+	height: auto;
+}
+
+.imp {
+	font-weight: bold;
+	text-align: center;
+}

@@ -51,7 +51,7 @@
 
 					</ul>
     			</div>
-    			<div class="nav"><p class="title-nav">Propositions</p>
+    			<div class="nav"><p class="title-nav">Services</p>
     				<ul>
 						<li><a href="#" class="btn" style="font-size: 16px;">Demander de l'assistance sur un produit</a></li>
 						<li><a href="#" class="btn" style="font-size: 16px;">Se faire conseiller sur un produit</a></li>

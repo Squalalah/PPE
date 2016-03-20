@@ -1,0 +1,20 @@
+#div-assist {
+
+	border: 1px solid black;
+	border-top-style: none;
+	background-color: white;
+	width: 70%;
+	margin: 0 auto;
+	height: auto;
+	padding: 8px;
+}
+
+#submit {
+
+	float: right;
+}
+
+p {
+
+	text-align: center;
+}

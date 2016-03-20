@@ -15,6 +15,7 @@
 		<meta name="description" content="Service Après Vente Loc Entreprise" />
 		<meta name="seulinkpeutvaincreganon" />
 		<link rel="stylesheet" type="text/css" href="css/mep.css" media="all">
+		<link rel="stylesheet" type="text/css" href="css/assistance.css" media="all">
 
 		<title>LOC Entreprise</title>
 
@@ -48,7 +49,7 @@
     			</div>
     			<div class="nav"><p class="title-nav">Services</p>
     				<ul>
-						<li><a href="#" class="btn" style="font-size: 16px;">Demander de l'assistance sur un produit</a></li>
+						<li><a href="assistance.php" class="btn" style="font-size: 16px;">Demander de l'assistance sur un produit</a></li>
 						<li><a href="#" class="btn" style="font-size: 16px;">Se faire conseiller sur un produit</a></li>
 					</ul>
     			</div>
@@ -56,12 +57,18 @@
 
     		</div>
     		<div class="element" style="border-right-style: none;">
+    			<div id="div-assist">
+    				<form action="#" method="POST">
+    						<p>Assistance sur un produit</p>
+    						<hr/>
+    					<label for="produit">Produit a dépanner : </label><select name="produit">
+    						<option name="pd1">Yolo</option>
+    						<option name="pd2">Test</option>
+    					</select>
+    					<input type="submit" name="submit" id="submit" />
 
-    			<form action="#" method="POST">
-
-
-    			</form>
-
+    				</form>
+    			</div>
     		</div>
 		</div>
 

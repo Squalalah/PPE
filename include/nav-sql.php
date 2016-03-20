@@ -10,7 +10,6 @@
     
     ?>
 
-
                 <div class="nav"><p class="title-nav">Les meilleurs recherches</p>
     				<ul>
     			<?php foreach($recherches as $donnees): ?>
@@ -24,5 +23,5 @@
     			<?php foreach($marque as $donnees): ?>
 							<li><a href="#" class="btn" style="font-size: 16px;"><?php echo $donnees->nom_marque; ?></a></li>
 				<?php endforeach; ?>
-					</ul>		
+					</ul>
     			</div>

@@ -11,7 +11,7 @@
 
 
 <div class="element" style="border-right-style: none;">
-    			Elément 2
+    			
 
     			<?php foreach($article as $donnees): ?>
     			<div id="div-article">

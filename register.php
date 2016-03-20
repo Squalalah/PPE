@@ -41,6 +41,7 @@
 				<?php   if ($lol == 0)
 						{ ?>
 							<li><a href="index.php" class="btn">Accueil</a></li>
+							<li><a href="login.php" class="btn">Se connecter</a></li>
 				<?php 	} 
 						else 
 						{ ?>

@@ -4,7 +4,7 @@
 	require_once 'connexion.class.php';
 	$ConnexionBaseSIO = new Connexion();
 	$IDconnexion = $ConnexionBaseSIO->IDconnexion;
-	$lol = 1;
+	$lol = 0;
 ?>
 
 <html lang="fr">

@@ -1,12 +1,15 @@
 
 <?php 
 
-	require_once 'connexion.class.php';
-    $ConnexionBaseSIO = new Connexion();
-    $IDconnexion = $ConnexionBaseSIO->IDconnexion;
+	function afficherArticle()
+	{
+		require_once 'connexion.class.php';
+	
+		$ConnexionBaseSIO = new Connexion();
+		$IDconnexion = $ConnexionBaseSIO->IDconnexion;
 
-    $article = $IDconnexion->query("select * FROM article ORDER BY id_article LIMIT 2");
-    ?>
+		$article = $IDconnexion->query("select * FROM article ORDER BY id_article LIMIT 2");
+?>
 
 
 
@@ -21,3 +24,5 @@
     			</div> <br />
     			<?php endforeach; ?>
 </div>
+
+	<?php } ?>

@@ -48,6 +48,19 @@
 					else if($page == "assistance") { include("include/form-assistance.php"); afficherFormAssistance(); }
 				?>
 		</div>
-
-		</div>
+		<footer>
+			<div class="footer">
+				<ul>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Recrutement</a></li>
+				</ul>
+			</div>
+			<div class="footer">
+				Element2
+			</div>
+			<div class="footer">
+				Element3
+			</div>
+		</footer>
 	</div>
+</div>

@@ -1,3 +1,7 @@
+<?php 
+
+    function afficherFormRegister()
+    { ?>
 
 
 <div class="element" style="border-right-style: none;">
@@ -23,3 +27,5 @@
     				</form>
     			</div>
 			</div>
+
+<?php } ?>

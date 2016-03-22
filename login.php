@@ -5,7 +5,8 @@
 	require_once 'connexion.class.php';
 	$ConnexionBaseSIO = new Connexion();
 	$IDconnexion = $ConnexionBaseSIO->IDconnexion;
-	$lol = "connexion"; 
+	$lol = "connexion";
+	$page = "login";
 
 	?>
 
@@ -26,7 +27,7 @@
 
 <body>
 
-<?php include("mep.php"); ?>	
+<?php include("include/mep.php"); ?>	
 
 </body>
 

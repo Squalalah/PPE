@@ -1,3 +1,10 @@
+<?php 
+
+    function afficherFormAssistance()
+    {
+
+?>
+
 <div class="element" style="border-right-style: none;">
     			<div id="div-assist">
     				<form action="#" method="POST">
@@ -12,3 +19,5 @@
     				</form>
     			</div>
     		</div>
+
+<?php } ?>

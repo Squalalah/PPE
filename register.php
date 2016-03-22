@@ -6,6 +6,7 @@
 	$ConnexionBaseSIO = new Connexion();
 	$IDconnexion = $ConnexionBaseSIO->IDconnexion;
 	$lol = "inscription"; 
+	$page = "register";
 
 	?>
 
@@ -26,7 +27,7 @@
 
 <body>
 
-<?php include("mep.php"); ?>
+<?php include("include/mep.php"); ?>
 
 </body>
 

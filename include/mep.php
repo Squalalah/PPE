@@ -42,10 +42,10 @@
     			<?php include("nav-sql.php"); ?>
 
     		</div>
-    	<?php		if($page == "index") include("article.php");
-					else if($page == "login") include("form-login.php");
-					else if($page == "register") include("form-register.php");
-					else if($page == "assistance") include("form-assistance.php");
+    	<?php 		if($page == "index") { include("include/article.php"); afficherArticle(); }
+					else if($page == "login") { include("include/form-login.php"); afficherFormLogin(); }
+					else if($page == "register") { include("include/form-register.php"); afficherFormRegister(); }
+					else if($page == "assistance") { include("include/form-assistance.php"); afficherFormAssistance(); }
 				?>
 		</div>
 

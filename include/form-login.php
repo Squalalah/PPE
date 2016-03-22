@@ -1,3 +1,8 @@
+<?php 
+
+    function afficherFormLogin()
+    { ?>
+
 <div class="element" style="border-right-style: none;">
     			<div class="div-logreg" style="border-top-style: none;">
     				<p class="imp">Connexion</p>
@@ -14,3 +19,5 @@
     				</form>
     			</div>
 			</div>
+
+<?php } ?>

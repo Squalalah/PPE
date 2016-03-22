@@ -5,6 +5,7 @@
 	$ConnexionBaseSIO = new Connexion();
 	$IDconnexion = $ConnexionBaseSIO->IDconnexion;
 	$lol = 0;
+	$page = "assistance";
 ?>
 
 <html lang="fr">
@@ -22,7 +23,7 @@
 	</head>
 
 	<body>
-	<?php include("mep.php"); ?>
+	<?php include("include/mep.php"); ?>
 	</body>
 
 </html>

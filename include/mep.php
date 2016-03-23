@@ -51,16 +51,17 @@
 		<footer>
 			<div class="footer">
 				<ul>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Recrutement</a></li>
+					<p><li><a href="#">Contact</a></li></p>
+					<p><li><a href="#">Recrutement</a></li></p>
 				</ul>
 			</div>
 			<div class="footer">
-				LOC Entreprises - Tout droit reservés<br />
-				Ce site est un travail pédagogique
+				<p class="p-footer">LOC Entreprise - Tout droits reservés</p>
+				<p class="p-footer">Ce site est un travail pédagogique</p>
 			</div>
 			<div class="footer">
-				Element3
+				<p class="p-footer">Developpé par Anthony Montreuil</p>
+				<p class="p-footer">Projet PPE 2.2 - Chevrollier BTS SIO</p>
 			</div>
 		</footer>
 	</div>

@@ -51,13 +51,13 @@
 		<footer>
 			<div class="footer">
 				<ul>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Recrutement</a></li>
+					<p class="p-footer"><li><a href="#">Contact</a></li></p>
+					<p class="p-footer"><li><a href="#">Recrutement</a></li></p>
 				</ul>
 			</div>
 			<div class="footer">
-				<p>LOC Entreprises - Tout droit reservés</p>
-				<p>Ce site est un travail pédagogique</p>
+				<p class="p-footer">LOC Entreprise - Tout droits reservés</p>
+				<p class="p-footer">Ce site est un travail pédagogique</p>
 			</div>
 			<div class="footer">
 				Element3

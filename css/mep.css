@@ -193,6 +193,7 @@ footer {
 .footer {
 
 	flex-direction: row;
+	height: 100px;
 	border-right-style: solid;
 	border-right-color: black;
 	border-right-width: 1px;
@@ -200,7 +201,20 @@ footer {
 
 }
 
+.footer:nth-child(3)
+{
+    border-right-style: none;
+}
+
 ul {
 
 	list-style-type: none;
+}
+
+
+
+.p-footer {
+
+	text-align:center;
+
 }

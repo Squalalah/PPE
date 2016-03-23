@@ -9,9 +9,8 @@
 ?>
 
 <html lang="fr">
-	dd
 	<head>
-		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" lang="fr" content="LOC,entreprise,assistance,conseil,informatique,depannage,logiciel" />
 		<meta name="description" content="Service Après Vente Loc Entreprise" />
 		<meta name="seulinkpeutvaincreganon" />

@@ -56,8 +56,8 @@
 				</ul>
 			</div>
 			<div class="footer">
-				LOC Entreprises - Tout droit reservés<br />
-				Ce site est un travail pédagogique
+				<p>LOC Entreprises - Tout droit reservés</p>
+				<p>Ce site est un travail pédagogique</p>
 			</div>
 			<div class="footer">
 				Element3

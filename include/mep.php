@@ -2,7 +2,7 @@
 		<div id="div-slogan">
 				<a href="index.php"><img src="img/header.jpg" alt="Header logo entreprise loc" /></a>
 				<!--<img id="logo" src="img/logo.png" alt="Logo Entreprise Loc" />
-				<p> Chaque probl�me a une solution ! Made by Squalalah </p>-->
+				<p> Chaque problème a une solution ! Made by Squalalah </p>-->
 		</div>
 		<div id="conteneur">
     		<div class="element">
@@ -17,7 +17,7 @@
 						else if ($lol == "online")
 						{ ?>
 							<li><a href="user.php" class="btn">Mon Compte</a></li>
-							<li><a href="disconnect.php" class="btn">Se D�connecter</a></li>
+							<li><a href="disconnect.php" class="btn">Se Déconnecter</a></li>
 				<?php   }
 						else if ($lol == "connexion")
 						{ ?>
@@ -48,6 +48,20 @@
 					else if($page == "assistance") { include("include/form-assistance.php"); afficherFormAssistance(); }
 				?>
 		</div>
-
-		</div>
+		<footer>
+			<div class="footer">
+				<ul>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Recrutement</a></li>
+				</ul>
+			</div>
+			<div class="footer">
+				LOC Entreprises - Tout droit reservés<br />
+				Ce site est un travail pédagogique
+			</div>
+			<div class="footer">
+				Element3
+			</div>
+		</footer>
 	</div>
+</div>

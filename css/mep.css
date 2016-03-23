@@ -179,3 +179,28 @@ a:hover {
   	padding: 7px 40px 7px 40px;
   	text-decoration: none;
 }
+
+footer {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	border-top-style: solid;
+	border-top-color: black;
+	border-top-width: 1px;
+
+}
+
+.footer {
+
+	flex-direction: row;
+	border-right-style: solid;
+	border-right-color: black;
+	border-right-width: 1px;
+	padding: 5px;
+
+}
+
+ul {
+
+	list-style-type: none;
+}

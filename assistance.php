@@ -23,7 +23,11 @@
 	</head>
 
 	<body>
-	<?php include("include/mep.php"); ?>
+
+	<?php 
+		//if(isset($_SESSION['id'])) 
+		include("include/mep.php");
+		//else header('Location: login.php'); ?>
 	</body>
 
 </html>

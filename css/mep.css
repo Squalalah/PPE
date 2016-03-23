@@ -201,10 +201,21 @@ footer {
 
 }
 
+.footer:nth-child(1){
+	flex: 1;
+}
+
+.footer:nth-child(2){
+	flex: 3;
+}
+
 .footer:nth-child(3)
 {
     border-right-style: none;
+    flex: 2;
 }
+
+
 
 ul {
 

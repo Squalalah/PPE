@@ -17,7 +17,7 @@
     			
 
     			<?php foreach($article as $donnees): ?>
-    			<div id="div-article">
+    			<div class="div-article">
     				<p class="imp"><?php echo $donnees->nom_article; ?></p>
     				<hr />
     				<p><?php echo $donnees->contenu_article;?></p>

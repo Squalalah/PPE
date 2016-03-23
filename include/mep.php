@@ -51,8 +51,8 @@
 		<footer>
 			<div class="footer">
 				<ul>
-					<p class="p-footer"><li><a href="#">Contact</a></li></p>
-					<p class="p-footer"><li><a href="#">Recrutement</a></li></p>
+					<p><li><a href="#">Contact</a></li></p>
+					<p><li><a href="#">Recrutement</a></li></p>
 				</ul>
 			</div>
 			<div class="footer">
@@ -60,7 +60,8 @@
 				<p class="p-footer">Ce site est un travail pédagogique</p>
 			</div>
 			<div class="footer">
-				Element3
+				<p class="p-footer">Developpé par Anthony Montreuil</p>
+				<p class="p-footer">Projet PPE 2.2 - Chevrollier BTS SIO</p>
 			</div>
 		</footer>
 	</div>

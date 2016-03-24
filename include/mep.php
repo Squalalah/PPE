@@ -47,6 +47,7 @@
 					else if($page == "register") { include("include/form-register.php"); afficherFormRegister(); }
 					else if($page == "assistance") { include("include/form-assistance.php"); afficherFormAssistance(); }
 					else if($page == "contact") { include("include/form-contact.php"); afficherFormContact(); }
+					else if ($page == "compte") { include("include/gerer_compte.php"); afficherGererCompte(); }
 				?>
 		</div>
 		<footer>

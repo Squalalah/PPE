@@ -1,0 +1,30 @@
+#parent {
+
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.enfant {
+
+	
+	width: auto;
+	height: auto;
+
+}
+
+img {
+
+	display: block;
+}
+
+p {
+	text-align: center;
+	margin: 0;
+}
+
+a:link {
+
+	text-decoration:none;
+	color: black;
+}

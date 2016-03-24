@@ -3,48 +3,32 @@
 <?php
 
 
-	public function afficherGererCompte()
+	function afficherGererCompte()
 	{
 
 		?>
 
 
-		<div class="parent">
+
+		<div id="parent">
 
 			<div class="enfant">
-				Element 1
+				<a href="compte.php"><img src="img/icon_phone_ticket.png" alt="Mes tickets" />
+				<p>Mes tickets</p></a>
 			</div>
-
 			<div class="enfant">
-				Element 2
+				<a href="#"><img src="img/support.png" alt="Support" />
+				<p>Support</p></a>
 			</div>
-
 			<div class="enfant">
-				Element 3
-			</div>
-
-
-		</div>
-
-		<div class="parent">
-
-			<div class="enfant">
-				Element 4
-			</div>
-
-			<div class="enfant">
-				Element 5
-			</div>
-
-			<div class="enfant">
-				Element 6
+				<a href="#"><img src="img/parametres.png" alt="Mes options" />
+				<p>Paramètres</p></a>
 			</div>
 
 		</div>
 
-
-
-
+			
+<?php
 	}
 
 ?>

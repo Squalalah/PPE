@@ -46,12 +46,13 @@
 					else if($page == "login") { include("include/form-login.php"); afficherFormLogin(); }
 					else if($page == "register") { include("include/form-register.php"); afficherFormRegister(); }
 					else if($page == "assistance") { include("include/form-assistance.php"); afficherFormAssistance(); }
+					else if($page == "contact") { include("include/form-contact.php"); afficherFormContact(); }
 				?>
 		</div>
 		<footer>
 			<div class="footer">
 				<ul>
-					<p><li><a href="#">Contact</a></li></p>
+					<p><li><a href="contact.php">Contact</a></li></p>
 					<p><li><a href="#">Recrutement</a></li></p>
 				</ul>
 			</div>

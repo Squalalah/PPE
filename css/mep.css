@@ -64,8 +64,6 @@ body {
 }
 
 .element {
-
-
 	flex-direction: column;
 	flex-wrap:nowrap;
 	position:relative;
@@ -138,9 +136,9 @@ a:hover {
 
 
 .btn {
-  background: #3498db;
   display: block;
   position: relative;
+  background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: -moz-linear-gradient(top, #3498db, #2980b9);
   background-image: -ms-linear-gradient(top, #3498db, #2980b9);
@@ -166,7 +164,7 @@ a:hover {
 .title-nav {
 
 	text-align: center;
-  	background: #f20519;
+	background: #f20519;
   	background-image: -webkit-linear-gradient(top, #f20519, #630927);
   	background-image: -moz-linear-gradient(top, #f20519, #630927);
 	 background-image: -ms-linear-gradient(top, #f20519, #630927);

@@ -8,27 +8,19 @@
     		<div class="element">
     			<div class="nav"><p class="title-nav">Navigation</p>
 					<ul>
+						<li><a href="index.php" class="btn">Accueil</a></li>
 
-				<?php   if ($lol == "offline")
+				<?php   if (!isset($_SESSION['id']))
 						{ ?>
 							<li><a href="login.php" class="btn">Se connecter</a></li>
 							<li><a href="register.php" class="btn">S'inscrire</a></li>
 				<?php 	} 
-						else if ($lol == "online")
+						else
 						{ ?>
-							<li><a href="user.php" class="btn">Mon Compte</a></li>
-							<li><a href="disconnect.php" class="btn">Se Déconnecter</a></li>
-				<?php   }
-						else if ($lol == "connexion")
-						{ ?>
-							<li><a href="index.php" class="btn">Accueil</a></li>
-							<li><a href="register.php" class="btn">S'inscrire</a></li>
-				<?php   }
-						else if ($lol == "inscription")
-						{ ?>
-							<li><a href="index.php" class="btn">Accueil</a></li>
-							<li><a href="login.php" class="btn">Se connecter</a></li>
+							<li><a href="compte.php" class="btn">Mon compte</a></li>
+							<li><a href="disconnect.php" class="btn">Se déconnecter</a></li>
 				<?php   } ?>
+
 					
 		
 					</ul>

@@ -2,10 +2,6 @@
 
 	session_start();
 
-	require_once 'connexion.class.php';
-	$ConnexionBaseSIO = new Connexion();
-	$IDconnexion = $ConnexionBaseSIO->IDconnexion;
-	$lol = "connexion";
 	$page = "login";
 
 	?>

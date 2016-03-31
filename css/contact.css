@@ -1,10 +1,10 @@
 #div-contact {
 
 	border: 1px solid black;
-	border-top-style: none;
 	background-color: white;
 	width: 70%;
 	margin: 0 auto;
+	margin-top: 20px;
 	height: auto;
 	padding: 8px;
 }

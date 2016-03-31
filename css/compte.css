@@ -1,21 +1,33 @@
-#parent {
+#element {
 
-	width: 100%;
 	display: flex;
+	flex-wrap:wrap;
+	position:relative;
 	justify-content: space-around;
+	width: auto;
+	height: 50%;
+	
 }
 
 .enfant {
 
-	
-	width: auto;
 	height: auto;
+	width: auto;
 
+}
+
+.enfant:nth-child(4)
+{
+	display: block;
+	height: 300px;
+	width: auto;
 }
 
 img {
 
 	display: block;
+	margin: 0 auto;
+
 }
 
 p {
@@ -26,5 +38,24 @@ p {
 a:link {
 
 	text-decoration:none;
-	color: black;
+}
+
+table {
+
+	display: block;
+	border: 1px solid black;
+	width: 500px;
+}
+
+#tableau {
+	display: block;
+}
+
+thead {
+
+	display:table-header-group;
+}
+
+td {
+	text-align: center;
 }

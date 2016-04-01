@@ -29,6 +29,7 @@
                 }
                 else if ($sql == 0)
                 {
+                    $_SESSION['error'] = 1;
                     header('Location: login.php');
                 }
 
@@ -37,6 +38,9 @@
             {?>
                 <div class="element" style="border-right-style: none;">
                     <div class="div-logreg">
+                    <?php if(isset($_SESSION['error']) AND $_SESSION['error'] == 1) { 
+                                                        echo "Erreur d'identifiants, merci de reessayez !";
+                                                        unset($_SESSION['error']); }?>
     				    <p class="imp">Connexion</p>
     				    <hr />
     				    <form action="#" method="POST">

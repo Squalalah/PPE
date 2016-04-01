@@ -1,19 +1,13 @@
 .div-article {
+	
 	background-color: white;
 	border: 1px solid black;
 	width: 70%;
 	margin: 0 auto;
+	margin-top : 20px;
 	padding: 8px;
 	height: auto;
 }
-
-.div-article:nth-child(1)
-{
-	border-top-style: none;
-}
-
-
-
 
 .imp {
 	font-weight: bold;

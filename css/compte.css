@@ -1,21 +1,29 @@
 #parent {
 
-	width: 100%;
+	height: auto;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }
-
 .enfant {
 
-	
-	width: auto;
 	height: auto;
+	width: auto;
 
+}
+
+.enfant:nth-child(4)
+{
+	height: 300px;
+	width: auto;
+	margin-top: 100px;
 }
 
 img {
 
 	display: block;
+	margin: 0 auto;
+
 }
 
 p {
@@ -26,5 +34,24 @@ p {
 a:link {
 
 	text-decoration:none;
-	color: black;
+}
+
+table {
+
+	display: block;
+	border: 1px solid black;
+	width: 500px;
+}
+
+#tableau {
+	display: block;
+}
+
+thead {
+
+	display:table-header-group;
+}
+
+td {
+	text-align: center;
 }

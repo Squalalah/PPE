@@ -5,7 +5,7 @@
 
 
 <div class="element" style="border-right-style: none;">
-    			<div class="div-logreg" style="border-top-style: none;">
+    			<div class="div-logreg">
     				<p class="imp">Inscription</p>
     				<hr />
     				<form action="#" method="POST">

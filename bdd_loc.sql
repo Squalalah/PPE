@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 22 Mars 2016 à 11:08
+-- Généré le :  Jeu 31 Mars 2016 à 17:53
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -110,6 +110,39 @@ INSERT INTO `produit` (`id_produit`, `nom_produit`, `type_produit`, `cpt_produit
 (4, 'Auchan PC', 'PC fixe', 8),
 (5, 'ACER pc', 'pc fixe', 5),
 (6, 'XFR 360', 'Processeur', 10);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ticket`
+--
+
+CREATE TABLE IF NOT EXISTS `ticket` (
+  `id_ticket` int(11) NOT NULL AUTO_INCREMENT,
+  `titre_ticket` varchar(100) COLLATE utf8_bin NOT NULL,
+  `desc_ticket` varchar(100) COLLATE utf8_bin NOT NULL,
+  `date_ticket` date NOT NULL,
+  `id_client` int(11) NOT NULL,
+  PRIMARY KEY (`id_ticket`),
+  KEY `id_client` (`id_client`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `ticket`
+--
+
+INSERT INTO `ticket` (`id_ticket`, `titre_ticket`, `desc_ticket`, `date_ticket`, `id_client`) VALUES
+(1, 'Probleme avec les Reseau', 'Les reseaux branlent rien.', '2016-03-31', 0);
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `client`
+--
+ALTER TABLE `client`
+  ADD CONSTRAINT `ticket-client` FOREIGN KEY (`id_client`) REFERENCES `ticket` (`id_ticket`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

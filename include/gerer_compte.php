@@ -4,7 +4,6 @@
 	
 	function afficherGererCompte()
 	{
-
 		?>
 
 
@@ -18,11 +17,11 @@
 				</div>
 				<div class="enfant">
 					<a href="#"><img src="img/support.png" alt="Support" />
-					<p>Support</p></a>
+					<p>Support</p>[CONSTRUCTION]</a>
 				</div>
 				<div class="enfant">
 					<a href="#"><img src="img/parametres.png" alt="Mes options" />
-					<p>Paramètres</p></a>
+					<p>Paramètres</p>[CONSTRUCTION]</a>
 				</div>
 <?php
 					if(isset($_GET['ticket']))
@@ -32,7 +31,9 @@
 							require_once 'connexion.class.php';
                 			$ConnexionBaseSIO = new Connexion();
                 			$IDconnexion = $ConnexionBaseSIO->IDconnexion;
-                			$ticket = $IDconnexion->prepare("SELECT * FROM ticket WHERE id_client = :id_client");
+                			$ticket = $IDconnexion->prepare("SELECT id_ticket, desc_ticket, etat_ticket, EXTRACT(YEAR FROM date_ticket) AS AAAA,
+							EXTRACT(MONTH FROM date_ticket) AS MM,
+							EXTRACT(DAY FROM date_ticket) AS JJ, id_client FROM ticket WHERE id_client = :id_client");
                 			$ticket->bindValue('id_client', $_SESSION['id'], PDO::PARAM_INT);
                 			$ticket->execute();
                 			$sql = $ticket->rowCount(); ?>
@@ -43,32 +44,31 @@
 											<th>N°Ticket</th>
 											<th>Description</th>
 											<th>Etat</th>
-											<th>Dernière Reponse</th>
+											<th>Crée le :</th>
 										</tr>
 
 <?php 									if($sql > 0)
 										{ 
 											foreach($ticket as $donnees):
 												if($donnees['etat_ticket'] == 0) $etat = "Fermé";
-												else $etat = "Ouvert";?>
+												else $etat = "Ouvert";
+												$date = $donnees['JJ'] . "/" . $donnees['MM'] . "/" . $donnees['AAAA'];?>
 												<tr>
 													<td><?php echo $donnees['id_ticket']; ?></td>
 													<td><?php echo $donnees['desc_ticket']; ?></td>
 													<td><?php echo $etat; ?></td>
-													<td><?php echo $donnees['date_ticket']; ?></td>
+													<td><?php echo $date; ?></td>
 												</tr>
 <?php 										endforeach;
-										}?>
-
+										} ?>
 									</table>
 								</div>
-<?php						}?>
+<?php					}
+						else header('Location: compte.php');?>
 						</div>
 <?php        		}?>
 				</div>
 			</div>
-			
-		</div>
 <?php
 	}
 

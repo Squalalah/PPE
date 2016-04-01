@@ -18,7 +18,7 @@
 						else
 						{ ?>
 							<li><a href="compte.php" class="btn">Mon compte</a></li>
-							<li><a href="disconnect.php" class="btn">Se déconnecter</a></li>
+							<li><a href="deconnexion.php" class="btn">Se déconnecter</a></li>
 				<?php   } ?>
 
 					
@@ -40,6 +40,7 @@
 					else if($page == "assistance") { include("include/form-assistance.php"); afficherFormAssistance(); }
 					else if($page == "contact") { include("include/form-contact.php"); afficherFormContact(); }
 					else if ($page == "compte") { include("include/gerer_compte.php"); afficherGererCompte(); }
+					else if($page == "deconnexion") { include ("include/tt_deconnexion.php"); afficherDeconnexion(); }
 				?>
 		</div>
 		<footer>

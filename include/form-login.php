@@ -25,6 +25,11 @@
                         $_SESSION['pseudo'] = $donnees['pseudo'];
 
                     }
+                    header('Location: index.php');
+                }
+                else if ($sql == 0)
+                {
+                    header('Location: login.php');
                 }
 
             }

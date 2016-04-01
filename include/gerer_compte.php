@@ -52,7 +52,7 @@
 											foreach($ticket as $donnees):
 												if($donnees['etat_ticket'] == 0) $etat = "Fermé";
 												else $etat = "Ouvert";
-												$date = $donnees['JJ'] . "/" . $donnees['MM'] . "/" . $donnees['AAAA'];?>
+												$date = $donnees['JJ'] . "/" . $donnees['MM'] . "/" . $donnees['AAAA']; ?>
 												<tr>
 													<td><?php echo $donnees['id_ticket']; ?></td>
 													<td><?php echo $donnees['desc_ticket']; ?></td>

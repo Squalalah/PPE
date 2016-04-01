@@ -1,14 +1,10 @@
-#element {
+#parent {
 
+	height: auto;
 	display: flex;
-	flex-wrap:wrap;
-	position:relative;
+	flex-wrap: wrap;
 	justify-content: space-around;
-	width: auto;
-	height: 50%;
-	
 }
-
 .enfant {
 
 	height: auto;
@@ -18,9 +14,9 @@
 
 .enfant:nth-child(4)
 {
-	display: block;
 	height: 300px;
 	width: auto;
+	margin-top: 100px;
 }
 
 img {

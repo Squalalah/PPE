@@ -25,8 +25,6 @@
                         $_SESSION['pseudo'] = $donnees['pseudo'];
 
                     }
-
-
                 }
 
             }

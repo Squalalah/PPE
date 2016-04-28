@@ -45,11 +45,11 @@
 						<div class="enfant">
 								<div id="tableau">
 									<table>
-										<tr>
-											<th>N°Ticket</th>
-											<th>Description</th>
-											<th>Etat</th>
-											<th>Crée le :</th>
+										<tr class="tr-th">
+											<th class="th">N°Ticket</th>
+											<th class="th">Description</th>
+											<th class="th">Etat</th>
+											<th class="th">Crée le :</th>
 										</tr>
 
 <?php									if($sql > 0)
@@ -60,11 +60,11 @@
 												$date = $donnees['JJ'] . "/" . $donnees['MM'] . "/" . $donnees['AAAA']; 
 												?>
 												<tr>
-													<td><a href=<?php echo "?contenu=" . $donnees['id_ticket'];?>>
+													<td class="td"><a href=<?php echo "?contenu=" . $donnees['id_ticket'];?>>
 														<?php echo $donnees['id_ticket'];?> </a></td>
-													<td><?php echo $donnees['desc_ticket']; ?></td>
-													<td><?php echo $etat; ?></td>
-													<td><?php echo $date; ?></td>
+													<td class="td"><?php echo $donnees['desc_ticket']; ?></td>
+													<td class="td"><?php echo $etat; ?></td>
+													<td class="td"><?php echo $date; ?></td>
 												</tr>
 <?php 										endforeach;
 										} ?>
@@ -91,18 +91,18 @@
 								<div id="tableau">
 									<table>
 										<tr>
-											<th>N°Message</th>
+											<th>Numéro</th>
 											<th>Auteur</th>
 											<th>Contenu</th>
 											<th>Envoyé le :</th>
 										</tr>
 
 <?php									if($squa > 0)
-										{ 
+										{
 											foreach($message as $data):
 												?>
 												<tr>
-													<td><?php echo $data['id_message'];?> </a></td>
+													<td><?php echo $data['id_message']; ?></a></td>
 													<td><?php echo $data['auteur_message']; ?></td>
 													<td><?php echo $data['contenu_message']; ?></td>
 													<td><?php echo $data['date_message']; ?></td>

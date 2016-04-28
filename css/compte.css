@@ -40,7 +40,7 @@ table {
 
 	display: block;
 	border: 1px solid black;
-	width: 500px;
+	width: 600px;
 }
 
 #tableau {
@@ -53,5 +53,32 @@ thead {
 }
 
 td {
+
+}
+
+.td {
+
 	text-align: center;
 }
+
+.th:nth-child(1)
+{
+	width: 80px;
+
+}
+
+.th:nth-child(2)
+{
+	width: 320px;
+}
+
+.th:nth-child(3)
+{
+	width: 100px;
+}
+
+.th:nth-child(4)
+{
+	width: 100px;
+}
+

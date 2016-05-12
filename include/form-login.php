@@ -11,7 +11,7 @@
 
                 $pseudo = $_POST['pseudo'];
                 $password = $_POST['password'];
-                $verif = $IDconnexion->prepare("SELECT * FROM client WHERE pseudo = :pseudo AND password = :password");
+                $verif = $IDconnexion->prepare("SELECT * FROM client WHERE IDCLIENT = :pseudo AND MDPCLIENT = :password");
                 $verif->bindValue('pseudo', $pseudo, PDO::PARAM_STR);
                 $verif->bindValue('password', $password, PDO::PARAM_STR);
                 $verif->execute();
@@ -21,8 +21,8 @@
                 {
                     foreach($verif as $donnees)
                     {
-                        $_SESSION['id'] = $donnees['id_client'];
-                        $_SESSION['pseudo'] = $donnees['pseudo'];
+                        $_SESSION['id'] = $donnees['NUMCLIENT'];
+                        $_SESSION['pseudo'] = $donnees['IDCLIENT'];
 
                     }
                     header('Location: index.php');

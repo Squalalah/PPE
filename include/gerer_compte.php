@@ -25,8 +25,8 @@
 					<p>Support</p>[CONSTRUCTION]</a>
 				</div>
 				<div class="enfant">
-					<a href="#"><img src="img/parametres.png" alt="Mes options" />
-					<p>Paramètres</p>[CONSTRUCTION]</a>
+					<a href=<?php echo "?param" ?>><img src="img/parametres.png" alt="Mes options" />
+					<p>Ajouter un produit</p>[CONSTRUCTION]</a>
 				</div>
 <?php
 					
@@ -36,9 +36,7 @@
                 		if($_GET['ticket'] == $_SESSION['id'])
 						{
 							
-                			$ticket = $IDconnexion->prepare("SELECT id_ticket, desc_ticket, etat_ticket, EXTRACT(YEAR FROM date_ticket) AS AAAA,
-							EXTRACT(MONTH FROM date_ticket) AS MM,
-							EXTRACT(DAY FROM date_ticket) AS JJ, id_client FROM ticket WHERE id_client = :id_client");
+                			$ticket = $IDconnexion->prepare("SELECT NUMTICKET, DESCRIPTION, FINI, NUMCLIENT FROM ticket WHERE NUMCLIENT = :id_client");
                 			$ticket->bindValue('id_client', $_SESSION['id'], PDO::PARAM_INT);
                 			$ticket->execute();
                 			$sql = $ticket->rowCount(); ?>
@@ -49,22 +47,18 @@
 											<th class="th">N°Ticket</th>
 											<th class="th">Description</th>
 											<th class="th">Etat</th>
-											<th class="th">Crée le :</th>
 										</tr>
 
 <?php									if($sql > 0)
 										{ 
 											foreach($ticket as $donnees):
-												if($donnees['etat_ticket'] == 0) $etat = "Fermé";
-												else $etat = "Ouvert";
-												$date = $donnees['JJ'] . "/" . $donnees['MM'] . "/" . $donnees['AAAA']; 
-												?>
+												if($donnees['FINI'] == "n") $etat = "Fermé";
+												else $etat = "Ouvert";?>
 												<tr>
-													<td class="td"><a href=<?php echo "?contenu=" . $donnees['id_ticket'];?>>
-														<?php echo $donnees['id_ticket'];?> </a></td>
-													<td class="td"><?php echo $donnees['desc_ticket']; ?></td>
+													<td class="td"><a href=<?php echo "?contenu=" . $donnees['NUMTICKET'];?>>
+														<?php echo $donnees['NUMTICKET'];?> </a></td>
+													<td class="td"><?php echo $donnees['DESCRIPTION']; ?></td>
 													<td class="td"><?php echo $etat; ?></td>
-													<td class="td"><?php echo $date; ?></td>
 												</tr>
 <?php 										endforeach;
 										} ?>
@@ -81,7 +75,7 @@
 							// A rajouter, moyen de sécurité pour éviter qu'une autre personne lise les messages d'une autre personne.
 							// Solution : reussir à implanter deux GET dans l'URL quand on clique sur le numéro de ticket
 							$contenu = $_GET['contenu'];
-							$message = $IDconnexion->prepare("SELECT * FROM message WHERE id_ticket = :id_ticket ORDER BY date_message");
+							$message = $IDconnexion->prepare("SELECT * FROM message WHERE NUMTICKET = :id_ticket ORDER BY DateMessage");
                 			$message->bindValue('id_ticket', $contenu, PDO::PARAM_INT);
                 			$message->execute();
                 			$squa = $message->rowCount();
@@ -102,17 +96,53 @@
 											foreach($message as $data):
 												?>
 												<tr>
-													<td><?php echo $data['id_message']; ?></a></td>
-													<td><?php echo $data['auteur_message']; ?></td>
-													<td><?php echo $data['contenu_message']; ?></td>
-													<td><?php echo $data['date_message']; ?></td>
+													<td><?php echo $data['NUMMESSAGE']; ?></a></td>
+													<td><?php echo $data['UTILISATEUR']; ?></td>
+													<td><?php echo $data['DESCRIPTION']; ?></td>
+													<td><?php echo $data['DateMessage']; ?></td>
 												</tr>
 <?php 										endforeach;
 										} ?>
 									</table>
 								</div>
 							</div>
-<?php					 }?>
+<?php				}
+					else if (isset($_GET['param']))
+					{ ?>
+
+						<div class="enfant">
+						<p>Ajouter un produit
+						<form action="compte.php" METHOD="POST">
+							<label for="serial1" style="display: block;">Clé de série :</label>
+							<input type="text" style="width: 75px;" name="serial1" maxlength="4" required />
+							<input type="text" style="width: 75px;" name="serial2" maxlength="4" required />
+							<input type="text" style="width: 75px;" name="serial3" maxlength="4" required />
+							<input type="text" style="width: 75px;" name="serial4" maxlength="4" required />
+
+							<input type="submit" name="submit" />
+						</form>
+						</div>
+
+<?php				}
+					else if(isset($_POST['serial1']))
+					{
+						$codeg = $_POST['serial1'] . "-" . $_POST['serial2'] . "-" . $_POST['serial3'] . "-" . $_POST['serial4'];
+						$code = $IDconnexion->prepare("SELECT * FROM garantie WHERE CODEGARANTIE = :id_garantie");
+						$code->bindValue('id_garantie', $codeg, PDO::PARAM_STR);
+						$code->execute();
+                		$result = $code->rowCount();
+                		if($result > 0)
+                		{
+                			$lien = $IDconnexion->prepare("UPDATE garantie SET NUMCLIENT = :id_client WHERE CODEGARANTIE = :id_garantie");
+                			$lien->bindValue('id_client', $_SESSION['id'], PDO::PARAM_INT);
+                			$lien->bindValue('id_garantie', $codeg, PDO::PARAM_STR);
+                			$lien->execute();
+                		}
+                		else echo "Code inexistant";
+                		$code->CloseCursor();
+
+					}
+ ?>
 				</div>
 			</div>
 <?php

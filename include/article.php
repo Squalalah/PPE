@@ -8,7 +8,7 @@
 		$ConnexionBaseSIO = new Connexion();
 		$IDconnexion = $ConnexionBaseSIO->IDconnexion;
 
-		$article = $IDconnexion->query("select * FROM article ORDER BY id_article LIMIT 2");
+		$article = $IDconnexion->query("select * FROM article ORDER BY numarticle LIMIT 2");
 ?>
 
 
@@ -18,9 +18,9 @@
 
     			<?php foreach($article as $donnees): ?>
     			<div class="div-article">
-    				<p class="imp"><?php echo $donnees->nom_article; ?></p>
+    				<p class="imp"><?php echo $donnees->TITRE; ?></p>
     				<hr />
-    				<p><?php echo $donnees->contenu_article;?></p>
+    				<p><?php echo $donnees->CONTENU;?></p>
     			</div> <br />
     			<?php endforeach; ?>
 </div>
